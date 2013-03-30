@@ -1,0 +1,19 @@
+<h1> Hi {{name}}, Welcome to Aptivity blog </h1>
+
+{% for blogcontent in blogcontents %}
+<div>
+		Blog content: {{blogcontent.message}} 
+		Posted by: {{blogcontent.who}}
+		on: {{blogcontent.when}}<br></br>			
+</div>
+{% endfor %}
+
+<form action="/yourblog" method="post" accept-charset="utf-8">
+
+<p>Blogger Name: <input type="text" name="blogger" value="" id="blogger"></p>
+
+<p>Blog: <textarea name="message" value="" id="message" ROWS="10" COLS="50"></textarea></p>
+
+<p><input type="submit" value="Post"></p>
+
+</form>
